@@ -1,0 +1,13 @@
+<%~ E.includeFile('code-comment') %>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%= it.title ?? 'Unknown page' %></title>
+		<%_~ E.includeFile('partials/general-meta').replaceAll('\n', '')
+		%><%_~E.includeFile('partials/general-imports', it).replaceAll('\n', '')
+		%>
+		<script class="uncompiled-script">
+			<%_~ it.script ?? '' %>
+		</script>
+	</head>
+</html>
