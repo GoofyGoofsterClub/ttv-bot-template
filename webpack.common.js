@@ -2,7 +2,6 @@ const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 const path = require('path');
 
 module.exports = {
-    mode: 'production',
     entry: {
         main: './websrc/index.js',
     },
