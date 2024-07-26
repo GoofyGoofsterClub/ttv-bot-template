@@ -1,1 +1,1 @@
-# MomThatMakesGreatPancakes2
+# Twitch Bot Project Template

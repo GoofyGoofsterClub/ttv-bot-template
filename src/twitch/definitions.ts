@@ -15,3 +15,13 @@ export abstract class Module {
     }
 
 }
+
+export abstract class YapperModule {
+    public abstract run(channel: string, tags: any, message: string, self: boolean): void;
+    public db: DatabaseInterface;
+
+    constructor(db: DatabaseInterface) {
+        this.db = db;
+    }
+
+}
