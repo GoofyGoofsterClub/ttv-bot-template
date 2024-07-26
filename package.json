@@ -1,45 +1,27 @@
 {
-  "name": "project",
+  "name": "mom",
   "version": "1.0.0",
   "main": "dist/index.ts",
   "license": "MIT",
   "dependencies": {
     "colors": "^1.4.0",
-    "css-loader": "^7.1.1",
-    "eta": "^2.0.1",
-    "express": "^4.18.2",
-    "html-loader": "^5.0.0",
-    "html-webpack-plugin": "^5.6.0",
     "mongodb": "^6.5.0",
-    "style-loader": "^4.0.0",
-    "typescript": "^5.0.4",
-    "webpack": "^5.91.0",
-    "webpack-manifest-plugin": "^5.0.0"
+    "tmi.js": "^1.8.5",
+    "typescript": "^5.0.4"
   },
   "scripts": {
     "build:ts": "tsc && tsc-alias",
     "build:ts:watch": "tsc && (concurrently \"tsc -w\" \"tsc-alias -w\")",
     "build:ts:run": "tsc && tsc-alias && node dist/index.js",
     "build:ts:run:watch": "concurrently \"npm run build:ts:watch\" \"node dist/index.js\"",
-    "build:webpack": "webpack --config webpack.config.js",
-    "build:webpack:dev": "webpack --config webpack.dev.js",
-    "build:webpack:dev:watch": "webpack --watch --config webpack.dev.js",
-    "build:webpack:prod": "webpack --config webpack.prod.js",
-    "build:win": "npm run build:ts & npm run build:webpack",
-    "build": "npm run build:ts && npm run build:webpack:prod",
-    "build:dev": "npm run build:ts && npm run build:webpack:dev",
-    "build:dev:watch": "concurrently \"npm run build:ts:run:watch\" \"npm run build:webpack:dev:watch\"",
     "start": "node dist/index.js"
   },
   "devDependencies": {
-    "@types/express": "^4.17.17",
     "@types/node": "^18.16.3",
+    "@types/tmi.js": "^1.8.6",
     "concurrently": "^8.2.2",
-    "sass": "^1.77.2",
-    "sass-loader": "^14.2.1",
     "ts-node": "^10.9.1",
     "tsc-alias": "^1.8.6",
-    "tsconfig-paths": "^4.2.0",
-    "webpack-cli": "^5.1.4"
+    "tsconfig-paths": "^4.2.0"
   }
 }

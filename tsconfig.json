@@ -1,25 +1,29 @@
 {
   "ts-node": {
-        "transpileOnly": true,
-        "require": ["tsconfig-paths/register"]
+    "transpileOnly": true,
+    "require": [
+      "tsconfig-paths/register"
+    ]
   },
   "compilerOptions": {
-    "target": "es2016", 
-
+    "target": "es2016",
     "module": "commonjs",
-    "baseUrl": ".", 
+    "baseUrl": ".",
     "paths": {
-      "@web/*": ["./src/web/*"],
-      "@utils/*": ["./src/utils/*"],
-      "@db/*": ["./src/db/*"]
+      "@utils/*": [
+        "./src/utils/*"
+      ],
+      "@db/*": [
+        "./src/db/*"
+      ],
+      "@twitch/*": [
+        "./src/twitch/*"
+      ]
     },
-
-    "outDir": "./dist",  
+    "outDir": "./dist",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-
     "strict": true,
-
     "skipLibCheck": true
   },
   "include": [
@@ -27,8 +31,8 @@
   ],
   "plugins": [
     {
-        "transform": "typescript-transform-paths",
-        "afterDeclarations": true
+      "transform": "typescript-transform-paths",
+      "afterDeclarations": true
     }
-]
+  ]
 }

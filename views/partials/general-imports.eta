@@ -1,1 +1,0 @@
-<script src="<%= it.manifest['main.js'] %>"></script>
